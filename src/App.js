@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import { Routes } from 'react-router-dom';
 import './App.css';
+import {pri500, } from './components/Colors'
+import {Button} from './components/Buttons'
+import { BigParagraph, HeadingOne, HeadingTwo, Paragraph } from './components/Text';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <HeadingOne style={{color:pri500}}> Protrack Project</HeadingOne>
+      <HeadingTwo>sample</HeadingTwo>
+      <BigParagraph>my paragraph <Button  color="primary" size="large">my button</Button> </BigParagraph>
+      <Paragraph>small text</Paragraph>
+      <Routes>
+
+      </Routes>
+      
     </div>
   );
 }

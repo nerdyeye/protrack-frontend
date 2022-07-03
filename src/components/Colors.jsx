@@ -1,0 +1,86 @@
+// Primary Colors
+export const pri50  ='#edeffb'
+export const pri100 ='#c6cef1'
+export const pri200 ='#aab6eb'
+export const pri300 ='#8495e2'
+export const pri400 ='#6c81dc'
+export const pri500 ='#4761d3'
+export const pri600 ='#4158c0'
+export const pri700 ='#324596'
+export const pri800 ='#273574'
+export const pri900 ='#1e2959'
+
+// Success Colors
+export const success50  ='#f2fbf2'
+export const success100 ='#d6f4d6'
+export const success200 ='#c3eec2'
+export const success300 ='#a7e7a7'
+export const success400 ='#96e295'
+export const success500 ='#7cdb7b'
+export const success600 ='#71c770'
+export const success700 ='#589b57'
+export const success800 ='#447844'
+export const success900 ='#345c34'
+
+// Secondary Colors
+export const sec50  ='#fdf2ff'
+export const sec100 ='#fad8ff'
+export const sec200 ='#f7c5ff'
+export const sec300 ='#f4aaff'
+export const sec400 ='#f199ff'
+export const sec500 ='#ee80ff'
+export const sec600 ='#d974e8'
+export const sec700 ='#a95bb5'
+export const sec800 ='#83468c'
+export const sec900 ='#64366b'
+
+// Error Colors
+export const err50  ='#fdecec'
+export const err100 ='#fac5c5'
+export const err200 ='#f7a9a9'
+export const err300 ='#f48282'
+export const err400 ='#f16969'
+export const err500 ='#ee4444'
+export const err600 ='#d93e3e'
+export const err700 ='#a93030'
+export const err800 ='#832525'
+export const err900 ='#641d1d'
+
+// Warning Colors
+export const warn50  ='#fef9ea'
+export const warn100 ='#fbeebe'
+export const warn200 ='#f9e59e'
+export const warn300 ='#f6d972'
+export const warn400 ='#f5d256'
+export const warn500 ='#f2c72c'
+export const warn600 ='#dcb528'
+export const warn700 ='#ac8d1f'
+export const warn800 ='#856d18'
+export const warn900 ='#665412'
+
+//Info Colors
+export const info50  = '#eef6ff'
+export const info100 = '#cbe2ff'
+export const info200 = '#b2d3ff'
+export const info300 = '#8fbffe'
+export const info400 = '#79b3fe'
+export const info500 = '#58a0fe'
+export const info600 = '#5092e7'
+export const info700 = '#3e72b4'
+export const info800 = '#30588c'
+export const info900 = '#25436b'
+
+//Grey Colors
+export const grey50  = '#ededed'
+export const grey100 = '#c8c8c8'
+export const grey200 = '#aeaeae'
+export const grey300 = '#898989'
+export const grey400 = '#727272'
+export const grey500 = '#4f4f4f'
+export const grey600 = '#484848'
+export const grey700 = '#383838'
+export const grey800 = '#2b2b2b'
+export const grey900 = '#212121'
+
+
+
