@@ -1,16 +1,19 @@
 import { Routes } from 'react-router-dom';
 import './App.css';
-import {pri500, } from './components/Colors'
-import {Button} from './components/Buttons'
-import { BigParagraph, HeadingOne, HeadingTwo, Paragraph } from './components/Text';
+import {pri500, } from './helpers/Colors';
+import {Button} from './components/atoms/Buttons';
+import { BigParagraph, HeadingOne, HeadingTwo, Paragraph } from './components/atoms/Text';
+import {Input, PasswordInput} from './components/atoms/Inputs';
 
 function App() {
   return (
     <div>
       <HeadingOne style={{color:pri500}}> Protrack Project</HeadingOne>
       <HeadingTwo>sample</HeadingTwo>
-      <BigParagraph>my paragraph <Button  color="primary" size="large">my button</Button> </BigParagraph>
+      <BigParagraph>my paragraph <Button type='text'  color="error" size="large">my buttn</Button> </BigParagraph>
       <Paragraph>small text</Paragraph>
+      <Input placeholder="enter name" />
+      <PasswordInput />
       <Routes>
 
       </Routes>

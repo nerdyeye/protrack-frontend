@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { pri500, pri700, sec500, success500, warn500, err500, info500, grey500, success700, sec700, warn700, err700, info700, grey700 } from './Colors';
+import { pri500, pri700, sec500, success500, warn500, err500, info500, grey500, success700, sec700, warn700, err700, info700, grey700 } from '../../helpers/Colors';
 
 export const Button = styled.button`
     font-size: ${props=>props.size==='large'? '24px' :
