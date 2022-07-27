@@ -4,6 +4,8 @@ import {pri500, } from './helpers/Colors';
 import {Button} from './components/atoms/Buttons';
 import { BigParagraph, HeadingOne, HeadingTwo, Paragraph } from './components/atoms/Text';
 import {Input, PasswordInput} from './components/atoms/Inputs';
+import Footer  from './components/molecules/Footer/Footer';
+
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
       <Paragraph>small text</Paragraph>
       <Input placeholder="enter name" />
       <PasswordInput />
+      <Footer />
       <Routes>
 
       </Routes>
