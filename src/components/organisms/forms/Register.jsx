@@ -1,12 +1,20 @@
 import React from "react";
 import Typography from "../../atoms/Typography";
-import { FormContent, FormLine, FormWrapper, SidePic } from "./FormStyle";
+import {
+  FormContent,
+  FormLine,
+  FormWrapper,
+  SocialIconBg,
+  SidePic,
+  SocialIcon,
+} from "./FormStyle";
 import Teampic from "../../../assets/images/teamoffice.jpg";
 import { Input } from "../../atoms/Input";
 import { Grey, Primary } from "../../../helpers/Colors";
 import { Link } from "react-router-dom";
 import Button from "../../atoms/Button";
 import { Container } from "../../../helpers/Container";
+import { InputLabel } from "@mui/material";
 
 const Register = () => {
   return (
@@ -21,12 +29,24 @@ const Register = () => {
               Get the best out of yourself, your team and organization.
             </Typography>
             <FormLine>
-              <Input placeholder="Jane Doe" Label="Fullname" />
-              <Input placeholder="+2348070987654" type="tel" />
+              <div>
+                <InputLabel style={{ float: "left" }}>Full Name</InputLabel>
+                <Input placeholder="Jane Doe" />
+              </div>
+              <div>
+                <InputLabel style={{ float: "left" }}>Phone Number</InputLabel>
+                <Input placeholder="+2348070987654" type="tel" />
+              </div>
             </FormLine>
             <FormLine>
-              <Input placeholder="email address" Label="" type="email" />
-              <Input placeholder="password" type="password" />
+              <div>
+                <InputLabel style={{ float: "left" }}>Email</InputLabel>
+                <Input placeholder="email address" type="email" />
+              </div>
+              <div>
+                <InputLabel style={{ float: "left" }}>Password</InputLabel>
+                <Input placeholder="password" type="password" />
+              </div>
             </FormLine>
             <Typography variant="small1" style={{ textAlign: "right" }}>
               <Link
@@ -45,6 +65,26 @@ const Register = () => {
               weight="semibold"
               style={{ width: "100%", margin: "15px 0" }}
             />
+
+            <Typography variant="p2">Or sign up with</Typography>
+            <SocialIcon>
+              <SocialIconBg></SocialIconBg>
+              <SocialIconBg></SocialIconBg>
+              <SocialIconBg></SocialIconBg>
+            </SocialIcon>
+            <Typography variant="p2">
+              Already have an account?{" "}
+              <Link
+                to="#"
+                style={{
+                  textDecoration: "none",
+                  color: `${Primary[500]}`,
+                  fontWeight: "700",
+                }}
+              >
+                sign in
+              </Link>
+            </Typography>
           </Container>
         </FormContent>
         <SidePic style={{ backgroundImage: `url(${Teampic})` }}></SidePic>
