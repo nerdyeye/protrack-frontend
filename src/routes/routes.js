@@ -1,4 +1,7 @@
+import Login from "../components/organisms/forms/Login";
 import Register from "../components/organisms/forms/Register";
+import About from "../components/templates/About/About";
+import Contact from "../components/templates/Contact/Contact";
 import Home from "../components/templates/Home";
 
 const routes = [
@@ -9,8 +12,20 @@ const routes = [
         component: Home,
       },
       {
-        path: "/register",
+        path: "/about",
+        component: About,
+      },
+      {
+        path: "/contact",
+        component: Contact,
+      },
+      {
+        path: "/signup",
         component: Register,
+      },
+      {
+        path: "/signin",
+        component: Login,
       },
     ],
   },

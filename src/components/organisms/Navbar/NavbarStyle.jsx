@@ -13,9 +13,12 @@ export const NavRow = styled.div`
   align-items: center;
 `;
 export const Logo = styled.div`
-  color: ${Grey[800]};
-  font-size: 32px;
-  font-weight: 900;
+  > a {
+    text-decoration: none;
+    color: ${Grey[800]};
+    font-size: 32px;
+    font-weight: 900;
+  }
 `;
 export const NavMenu = styled.div`
   color: ${Grey[700]};

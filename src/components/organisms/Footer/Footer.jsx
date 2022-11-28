@@ -33,7 +33,7 @@ const Footer = () => {
             <FooterCol>
               <FooterMenu>
                 <FooterLinks>
-                  <Link to="#">About</Link>
+                  <Link to="/about">About</Link>
                 </FooterLinks>
                 <FooterLinks>
                   <Link to="#">Pricing</Link>
@@ -42,7 +42,7 @@ const Footer = () => {
                   <Link to="#">Features</Link>
                 </FooterLinks>
                 <FooterLinks>
-                  <Link to="#">Contact</Link>
+                  <Link to="/contact">Contact</Link>
                 </FooterLinks>
                 <FooterLinks>
                   <Link to="#">Support</Link>

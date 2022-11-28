@@ -1,20 +1,20 @@
 import React from "react";
-import Typography from "../../atoms/Typography";
+import { Container } from "../../../helpers/Container";
 import {
   FormContent,
-  FormLine,
   FormWrapper,
-  SocialIconBg,
   SidePic,
+  FormLine,
+  SocialIconBg,
   SocialIcon,
 } from "./FormStyle";
+import Typography from "../../atoms/Typography";
 import Teampic from "../../../assets/images/teamoffice.jpg";
 import { Input } from "../../atoms/Input";
 import { Grey, Primary } from "../../../helpers/Colors";
 import { Link } from "react-router-dom";
 import Button from "../../atoms/Button";
-import { Container } from "../../../helpers/Container";
-import { InputLabel } from "@mui/material";
+import { Checkbox, FormControlLabel, InputLabel } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faApple,
@@ -22,31 +22,36 @@ import {
   faGoogle,
 } from "@fortawesome/free-brands-svg-icons";
 import { useFormik } from "formik";
-import { registerSchema } from "../../../schemas/register";
 
-const onSubmit = () => {
-  console.log("submitted");
-};
-
-const Register = () => {
-  const { values, handleBlur, handleChange, handleSubmit } = useFormik({
+const Login = () => {
+  const validate = (values) => {
+    const errors = {};
+    if (!values.email) {
+      errors.email = "Required";
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+    ) {
+      errors.email = "Incorrect email format";
+    }
+    if (!values.password) {
+      errors.password = "Required";
+    }
+    return errors;
+  };
+  const formik = useFormik({
     initialValues: {
-      fullname: "",
-      phoneNo: "",
       email: "",
       password: "",
     },
-    validationSchema: registerSchema,
-    onSubmit,
+    validate,
   });
-  // console.log(error);
   return (
     <>
       <FormWrapper>
         <FormContent>
           <Container>
             <Typography variant="h1" weight={"bold"} color={Grey[800]}>
-              Welcome to Protrack
+              Sign In
             </Typography>
             <Typography variant="p1" color={Grey[800]}>
               Get the best out of yourself, your team and organization.
@@ -54,74 +59,48 @@ const Register = () => {
             <form>
               <FormLine>
                 <div>
-                  <InputLabel style={{ float: "left" }}>Full Name</InputLabel>
-                  <Input
-                    placeholder="Jane Doe"
-                    id="fullname"
-                    value={values.fullname}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                  />
-                </div>
-                <div>
-                  <InputLabel style={{ float: "left" }}>
-                    Phone Number
-                  </InputLabel>
-                  <Input
-                    placeholder="+2348070987654"
-                    id="phoneNo"
-                    type="tel"
-                    value={values.phoneNo}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                  />
-                </div>
-              </FormLine>
-              <FormLine>
-                <div>
                   <InputLabel style={{ float: "left" }}>Email</InputLabel>
                   <Input
                     placeholder="email address"
-                    id="email"
                     type="email"
-                    value={values.email}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
+                    id="email"
+                    value={formik.values.email}
+                    onBlur={formik.handleBlur}
+                    onChange={formik.handleChange}
                   />
                 </div>
                 <div>
                   <InputLabel style={{ float: "left" }}>Password</InputLabel>
                   <Input
                     placeholder="password"
-                    id="password"
                     type="password"
-                    value={values.password}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
+                    id="password"
+                    value={formik.values.paasword}
+                    onBlur={formik.handleBlur}
+                    onChange={formik.handleChange}
                   />
                 </div>
               </FormLine>
-              <Typography variant="small1" style={{ textAlign: "right" }}>
-                <Link
-                  to="#"
-                  style={{
-                    textDecoration: "none",
-                    color: `${Primary[500]}`,
-                  }}
-                >
-                  Forgot Password?
-                </Link>
-              </Typography>
               <Button
-                type="submit"
-                onSubmit={handleSubmit}
-                label="Sign Up"
+                label="Sign In"
                 size="large"
                 weight="semibold"
                 style={{ width: "100%", margin: "25px 0" }}
+                type="submit"
               />
             </form>
-            <Typography variant="p2">Or sign up with</Typography>
+            <FormControlLabel
+              style={{
+                float: "left",
+                color: `${Grey[500]}`,
+              }}
+              control={<Checkbox style={{ color: `${Primary[400]}` }} />}
+              label="Remember me"
+            />
+
+            <Typography variant="p2" style={{ paddingTop: "50px" }}>
+              Or sign in with
+            </Typography>
             <SocialIcon>
               <SocialIconBg>
                 <FontAwesomeIcon icon={faGoogle} size="2x" />
@@ -140,16 +119,16 @@ const Register = () => {
               </SocialIconBg>
             </SocialIcon>
             <Typography variant="p2">
-              Already have an account?{" "}
+              Don't have an account?{" "}
               <Link
-                to="/signin"
+                to="/signup"
                 style={{
                   textDecoration: "none",
                   color: `${Primary[500]}`,
                   fontWeight: "700",
                 }}
               >
-                sign in
+                sign up
               </Link>
             </Typography>
           </Container>
@@ -160,4 +139,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;

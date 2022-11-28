@@ -30,10 +30,7 @@ const Navbar = () => {
           <NavRow>
             <Col>
               <Logo>
-                {" "}
-                <Typography variant="h1" weight={"bold"}>
-                  ProTrack
-                </Typography>
+                <Link to="/">ProTrack</Link>
               </Logo>
             </Col>
             <Col>
@@ -46,10 +43,10 @@ const Navbar = () => {
                   <Link to="#">Pricing</Link>
                 </NavList>
                 <NavList>
-                  <Link to="#">About</Link>
+                  <Link to="/about">About</Link>
                 </NavList>
                 <NavList>
-                  <Link to="#">Contact</Link>
+                  <Link to="/contact">Contact</Link>
                 </NavList>
               </NavMenu>
             </Col>
@@ -59,7 +56,7 @@ const Navbar = () => {
                   label="Sign up"
                   size="large"
                   weight="bold"
-                  onClick={() => navigate("/register")}
+                  onClick={() => navigate("/signup")}
                 />
               </NavButton>
             </Col>
@@ -89,10 +86,10 @@ const Navbar = () => {
               <Link to="#">Pricing</Link>
             </MobileList>
             <MobileList>
-              <Link to="#">About</Link>
+              <Link to="/about">About</Link>
             </MobileList>
             <MobileList>
-              <Link to="#">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </MobileList>
           </MobileMenu>
           <MobileButton>
@@ -101,6 +98,7 @@ const Navbar = () => {
               weight="bold"
               style={{ background: `${Grey[50]}`, color: `${Primary[500]}` }}
               label="Sign up"
+              onClick={() => navigate("/signup")}
             />
           </MobileButton>
         </MobileWrapper>

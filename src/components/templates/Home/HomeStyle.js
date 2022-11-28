@@ -27,6 +27,7 @@ export const HeroImg = styled.div`
   width: 614px;
   height: 657px;
   background-size: cover;
+  background-position: center;
   border-top-left-radius: 300px;
   border-top-right-radius: 300px;
   border-bottom-left-radius: 50px;
@@ -39,58 +40,51 @@ export const HeroImg = styled.div`
     display: none;
   }
 `;
-export const HeroImg1 = styled.div`
+export const RightSideImg = styled.div`
   margin-top: 100px;
   margin-bottom: 100px;
-  width: 500px;
-  height: 550px;
+  width: 90%;
+  height: 500px;
   background-color: #ccc;
   background-size: cover;
+  background-position: center;
   border-top-right-radius: 300px;
   border-bottom-right-radius: 300px;
   @media (max-width: 1024px) {
-    width: 450px;
-    height: 520px;
+    width: 95%;
+    height: 450px;
   }
   @media (max-width: 768px) {
-    width: 331px;
+    width: 100%;
     height: 351px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-  }
-  @media (max-width: 768px) {
-    width: 281px;
-    height: 251px;
     margin-top: 50px;
     margin-bottom: 20px;
   }
 `;
-export const HeroImg2 = styled.div`
+export const LeftSideImg = styled.div`
   margin-top: 100px;
   margin-bottom: 100px;
   margin-left: auto;
-  width: 500px;
-  height: 550px;
+  width: 90%;
+  height: 500px;
   background-color: #ccc;
   background-size: cover;
+  background-position: center;
   border-top-left-radius: 300px;
   border-bottom-left-radius: 300px;
   @media (max-width: 1024px) {
-    width: 450px;
+    width: 95%;
     height: 520px;
   }
   @media (max-width: 768px) {
-    width: 331px;
+    width: 100%;
     height: 351px;
     margin-top: 50px;
     margin-bottom: 70px;
   }
-  @media (max-width: 768px) {
-    width: 281px;
-    height: 251px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
+`;
+export const HomeText = styled.div`
+  margin-top: 13%;
 `;
 export const SpecialBg = styled.div`
   background-color: ${Primary[50]};

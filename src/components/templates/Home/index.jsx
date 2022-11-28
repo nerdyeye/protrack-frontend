@@ -7,8 +7,8 @@ import {
   HeroText,
   Headings,
   HeroImg,
-  HeroImg1,
-  HeroImg2,
+  RightSideImg,
+  LeftSideImg,
   IconBg,
   SpecialBg,
   Sub,
@@ -21,6 +21,7 @@ import {
   TestimonialPic,
   TestimonialDetails,
   YearPrice,
+  HomeText,
 } from "./HomeStyle";
 import Typography from "../../atoms/Typography";
 import Button from "../../atoms/Button";
@@ -65,15 +66,45 @@ const Home = () => {
             <Container>
               <Row>
                 <Col>
-                  <HeroImg1
+                  <RightSideImg
                     style={{ backgroundImage: `url(${Individualpic})` }}
-                  ></HeroImg1>
+                  ></RightSideImg>
                 </Col>
-                <Col style={{ marginTop: "13%" }}>
+                <Col>
+                  <HomeText>
+                    <Typography variant="h6" style={{ color: Primary[500] }}>
+                      Indiviual Account
+                    </Typography>
+                    <Typography variant="h2">INDIVIDUAL ACCOUNT</Typography>
+                    <Typography variant="p1" style={{ lineHeight: "30.6px" }}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Ac purus, molestie elit senectus feugiat tellus imperdiet
+                      pretium. Feugiat consectetur odio praesent aliquam.
+                      Commodo neque dui consectetur dignissim nisl libero neque
+                      scelerisque non. Elementum sem pellentesque nulla pretium
+                      sem a sed hendrerit porttitor. Nulla cum.
+                    </Typography>{" "}
+                    <br />
+                    <Button
+                      size="large"
+                      weight="bold"
+                      label="Create Your Account"
+                    />
+                  </HomeText>
+                </Col>
+              </Row>
+            </Container>
+          </SpecialBg>
+        </section>
+        <section>
+          <Container>
+            <Row>
+              <Col>
+                <HomeText>
                   <Typography variant="h6" style={{ color: Primary[500] }}>
-                    Indiviual Account
+                    Organizational Account
                   </Typography>
-                  <Typography variant="h2">INDIVIDUAL ACCOUNT</Typography>
+                  <Typography variant="h2">ORGANIZATIONAL ACCOUNT</Typography>
                   <Typography variant="p1" style={{ lineHeight: "30.6px" }}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac
                     purus, molestie elit senectus feugiat tellus imperdiet
@@ -88,38 +119,12 @@ const Home = () => {
                     weight="bold"
                     label="Create Your Account"
                   />
-                </Col>
-              </Row>
-            </Container>
-          </SpecialBg>
-        </section>
-        <section>
-          <Container>
-            <Row>
-              <Col style={{ marginTop: "13%" }}>
-                <Typography variant="h6" style={{ color: Primary[500] }}>
-                  Organizational Account
-                </Typography>
-                <Typography variant="h2">ORGANIZATIONAL ACCOUNT</Typography>
-                <Typography variant="p1" style={{ lineHeight: "30.6px" }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac
-                  purus, molestie elit senectus feugiat tellus imperdiet
-                  pretium. Feugiat consectetur odio praesent aliquam. Commodo
-                  neque dui consectetur dignissim nisl libero neque scelerisque
-                  non. Elementum sem pellentesque nulla pretium sem a sed
-                  hendrerit porttitor. Nulla cum.
-                </Typography>{" "}
-                <br />
-                <Button
-                  size="large"
-                  weight="bold"
-                  label="Create Your Account"
-                />
+                </HomeText>
               </Col>
               <Col>
-                <HeroImg2
+                <LeftSideImg
                   style={{ backgroundImage: `url(${Teampic})` }}
-                ></HeroImg2>
+                ></LeftSideImg>
               </Col>
             </Row>
           </Container>
