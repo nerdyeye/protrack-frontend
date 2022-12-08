@@ -1,3 +1,4 @@
+import ForgotPassword from "../components/organisms/forms/ForgotPassword";
 import Login from "../components/organisms/forms/Login";
 import Register from "../components/organisms/forms/Register";
 import About from "../components/templates/About/About";
@@ -26,6 +27,10 @@ const routes = [
       {
         path: "/signin",
         component: Login,
+      },
+      {
+        path: "/passwordReset",
+        component: ForgotPassword,
       },
     ],
   },

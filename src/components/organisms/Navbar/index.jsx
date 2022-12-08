@@ -15,7 +15,7 @@ import {
 } from "./NavbarStyle";
 import { Container, Col } from "../../../helpers/Container";
 import Button from "../../atoms/Button";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import Typography from "../../atoms/Typography";
 import FeatherIcon from "feather-icons-react";
 import { Grey, Primary } from "../../../helpers/Colors";
@@ -30,23 +30,29 @@ const Navbar = () => {
           <NavRow>
             <Col>
               <Logo>
-                <Link to="/">ProTrack</Link>
+                <NavLink exact activeClassName="active" to="/">
+                  ProTrack
+                </NavLink>
               </Logo>
             </Col>
             <Col>
               <NavMenu>
                 <NavList>
                   {" "}
-                  <Link to="#">Features</Link>
+                  <NavLink to="/features">Features</NavLink>
                 </NavList>
                 <NavList>
-                  <Link to="#">Pricing</Link>
+                  <NavLink to="/pricing">Pricing</NavLink>
                 </NavList>
                 <NavList>
-                  <Link to="/about">About</Link>
+                  <NavLink activeClassName="active" to="/about" className="">
+                    About
+                  </NavLink>
                 </NavList>
                 <NavList>
-                  <Link to="/contact">Contact</Link>
+                  <NavLink activeClassName="active" to="/contact">
+                    Contact
+                  </NavLink>
                 </NavList>
               </NavMenu>
             </Col>
@@ -80,10 +86,10 @@ const Navbar = () => {
           <MobileMenu>
             <MobileList>
               {" "}
-              <Link to="#">Features</Link>
+              <Link to="/features">Features</Link>
             </MobileList>
             <MobileList>
-              <Link to="#">Pricing</Link>
+              <Link to="/pricing">Pricing</Link>
             </MobileList>
             <MobileList>
               <Link to="/about">About</Link>

@@ -25,6 +25,7 @@ export const NavMenu = styled.div`
   align-items: center;
   display: flex;
   padding-top: 10px;
+
   @media (max-width: 768px) {
     display: none;
   }
@@ -33,9 +34,16 @@ export const NavList = styled.div`
   flex: 1;
   font-size: 16px;
   line-height: 20px;
+
   > a {
     text-decoration: none;
     color: ${Grey[900]};
+    :hover {
+      color: ${Primary[500]};
+    }
+    &.active {
+      color: ${Primary[500]};
+    }
   }
 `;
 export const NavButton = styled.div`

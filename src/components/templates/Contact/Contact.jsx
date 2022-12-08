@@ -4,6 +4,7 @@ import Typography from "../../atoms/Typography";
 import { AboutHeadings, AboutText } from "../About/AboutStyle";
 import { LeftSideImg, RightSideImg } from "../Home/HomeStyle";
 import contacthero from "../../../assets/images/team_high_five.jpeg";
+import customerservice from "../../../assets/images/24:7_team.jpeg";
 import Button from "../../atoms/Button";
 import { InputLabel } from "@mui/material";
 import { Input, TextArea } from "../../atoms/Input";
@@ -112,7 +113,7 @@ function Contact() {
             <Row>
               <Col>
                 <RightSideImg
-                  style={{ backgroundImage: `url(${contacthero})` }}
+                  style={{ backgroundImage: `url(${customerservice})` }}
                 ></RightSideImg>
               </Col>
               <Col>
