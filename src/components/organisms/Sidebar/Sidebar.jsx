@@ -9,13 +9,6 @@ import {
   SideMenuList,
   SideWrapper,
 } from "./SidebarStyle";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHome,
-  faHomeAlt,
-  faHomeLg,
-  faStopwatch,
-} from "@fortawesome/free-solid-svg-icons";
 import Icon from "../../../assets/icon";
 
 function Sidebar() {
